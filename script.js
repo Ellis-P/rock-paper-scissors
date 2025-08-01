@@ -1,10 +1,3 @@
-/* 
-getComputerChoice logic:
-Goal - getComputerChoice randomly returns one of rock/paper/scissors
-1. Generate a random number between 0 and 2 inclusive
-2. Return rock, paper or scissors based on the number generated (e.g. if 1, return rock, 2 paper etc.)
-*/
-
 // Generates a random number between 0 and 2
 function getRandomNum() {
   let randomNum = Math.floor(Math.random() * 3);
@@ -24,12 +17,7 @@ function getComputerChoice() {
   }
 }
 
-/* getHumanChoice logic:
-prompt the user for input, converting to lower case and storing the result in a variable
-check the response variable to see if it matches one of rock, paper or scissors
-return the matching choice
-*/
-
+// Prompts user for input and converts it to lower case. NOTE: Does not handle invalid inputs yet!
 function getHumanChoice() {
   const playerInput = prompt("Your move! Select rock, paper or scissors.").toLowerCase();
 
@@ -42,14 +30,7 @@ function getHumanChoice() {
   }
 }
 
-/* Single round game logic:
-Take humanChoice and computerChoice as inputs
-Compare the choices to determine the result
-Increment the score variable for the winner, or leave both unchanged if result is a draw
-Post a results message (e.g. The computer wins / you win)
- */
-
-
+// Full game loop, tracks scores and runs the playRound function five times. After five rounds, declares the result (win, lose or draw).
 function playGame () {
   let humanScore = 0;
   let computerScore = 0;
