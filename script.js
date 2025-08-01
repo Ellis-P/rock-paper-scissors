@@ -16,11 +16,11 @@ function getComputerChoice() {
   const num = getRandomNum();
   
   if (num === 0) {
-    return "Rock";
+    return "rock";
   } else if (num === 1) {
-    return "Paper";
+    return "paper";
   } else {
-    return "Scissors";
+    return "scissors";
   }
 }
 
@@ -45,4 +45,31 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+/* Single round game logic:
+Take humanChoice and computerChoice as inputs
+Compare the choices to determine the result
+Increment the score variable for the winner, or leave both unchanged if result is a draw
+Post a results message (e.g. The computer wins / you win)
+ */
 
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log("It's a draw!");
+  } else if (
+    humanChoice === "rock" && computerChoice === "scissors" ||
+    humanChoice === "paper" && computerChoice === "rock" ||
+    humanChoice === "scissors" && computerChoice === "paper"
+  ) {
+    console.log(`GG! You won this round, ${humanChoice} beats ${computerChoice}.`);
+    humanScore++;
+  } else {
+    console.log(`Unlucky! You lost this round, ${computerChoice} beats ${humanChoice}.`);
+    computerScore++;
+  }
+  console.log(`The score is: You - ${humanScore} | Computer - ${computerScore}`);
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
