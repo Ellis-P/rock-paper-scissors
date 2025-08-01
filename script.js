@@ -11,8 +11,10 @@ function getRandomNum() {
   return randomNum;
 }
 
-// 
-function getComputerChoice(num) {
+// Evaluates the random number generated to determine which move to make
+function getComputerChoice() {
+  const num = getRandomNum();
+  
   if (num === 0) {
     return "Rock";
   } else if (num === 1) {
