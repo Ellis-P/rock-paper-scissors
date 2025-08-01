@@ -12,7 +12,7 @@ function getRandomNum() {
 }
 
 // 
-function generateChoice(num) {
+function getComputerChoice(num) {
   if (num === 0) {
     return "Rock";
   } else if (num === 1) {
@@ -20,9 +20,4 @@ function generateChoice(num) {
   } else {
     return "Scissors";
   }
-}
-
-function getComputerChoice() {
- let randomNum = getRandomNum();
- return generateChoice(randomNum);
 }
