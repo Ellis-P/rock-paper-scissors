@@ -23,5 +23,6 @@ function generateChoice(num) {
 }
 
 function getComputerChoice() {
-
+ let randomNum = getRandomNum();
+ return generateChoice(randomNum);
 }
