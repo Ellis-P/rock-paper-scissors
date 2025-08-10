@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 66%;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 20px;
+  border-radius: 8px;
+  flex: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
