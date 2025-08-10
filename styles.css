@@ -22,6 +22,10 @@ button {
   font-weight: bold;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 p {
   font-size: 20px;
   text-align: center;
